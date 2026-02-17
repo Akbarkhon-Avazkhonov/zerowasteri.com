@@ -1,102 +1,103 @@
-"use client"
+'use client'
 
-import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { ShoppingCart } from "lucide-react"
+import { ShoppingCart } from 'lucide-react'
 
 const products = [
   {
     id: 1,
-    name: "Naked Soap Bars",
-    price: "$12",
-    gradient: "from-pink-400 to-purple-400",
-    description: "Hand-crafted, fragrance-free cleansing bars",
-    image: "https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?w=400&h=400&fit=crop",
+    name: 'Straight Razors',
+    price: '$120',
+    description: 'Surgical-grade stainless steel with ergonomic handles',
+    image: 'https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=400&h=400&fit=crop',
   },
   {
     id: 2,
-    name: "Bamboo Fiber Sponges",
-    price: "$8",
-    gradient: "from-teal-400 to-emerald-500",
-    description: "Biodegradable exfoliating sponges",
-    image: "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=400&h=400&fit=crop",
+    name: 'Safety Razors',
+    price: '$45',
+    description: 'Precision-engineered for the perfect shave',
+    image: 'https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=400&h=400&fit=crop',
   },
   {
     id: 3,
-    name: "Mineral Soak Salts",
-    price: "$24",
-    gradient: "from-amber-300 to-orange-400",
-    description: "Himalayan pink salt with essential oils",
-    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400&h=400&fit=crop",
+    name: 'Badger Hair Brushes',
+    price: '$85',
+    description: 'Handcrafted with premium badger hair',
+    image: 'https://images.unsplash.com/photo-1633598201241-81f1dc8b6b4e?w=400&h=400&fit=crop',
   },
   {
     id: 4,
-    name: "Solid Shampoo Bars",
-    price: "$16",
-    gradient: "from-indigo-400 to-purple-500",
-    description: "Zero-waste hair care for all types",
-    image: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400&h=400&fit=crop",
+    name: 'Premium Lathers',
+    price: '$28',
+    description: 'Nutrient-rich shaving creams and soaps',
+    image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&h=400&fit=crop',
   },
   {
     id: 5,
-    name: "Konjac Sponges",
-    price: "$6",
-    gradient: "from-rose-300 to-pink-400",
-    description: "Gentle facial cleansing sponges",
-    image: "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=400&h=400&fit=crop&q=80",
+    name: 'Aftershave Balms',
+    price: '$32',
+    description: 'Cooling and nourishing post-shave care',
+    image: 'https://images.unsplash.com/photo-1565958011504-98f3afa9f062?w=400&h=400&fit=crop',
   },
   {
     id: 6,
-    name: "Body Oil Blends",
-    price: "$32",
-    gradient: "from-yellow-300 to-amber-400",
-    description: "Nourishing botanical oil infusions",
-    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&h=400&fit=crop",
+    name: 'Honing Strops',
+    price: '$95',
+    description: 'Professional leather maintenance tools',
+    image: 'https://images.unsplash.com/photo-1633613286991-611bcede9a46?w=400&h=400&fit=crop',
   },
 ]
 
 export function ProductGrid() {
   return (
-    <section className="py-24 px-4 bg-[#F0F7F4]">
-      <div className="container mx-auto">
+    <section id="steel" className="py-24 px-4 sm:px-6 lg:px-8 bg-lather-white dark:bg-midnight-steel">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-display text-5xl md:text-7xl font-bold text-[#0B3D33] mb-4">The Texture-First Shop</h2>
-          <p className="text-lg md:text-xl text-[#0B3D33]/70 max-w-2xl mx-auto">
-            Every product is a celebration of nature, crafted without plastic, designed for pure indulgence.
+          <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-midnight-steel dark:text-lather-white mb-4">
+            Steel Selection
+          </h2>
+          <p className="text-lg sm:text-xl text-midnight-steel/70 dark:text-lather-white/70 max-w-2xl mx-auto">
+            Precision instruments crafted from surgical-grade materials. Every blade, every bristle engineered for perfection.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product) => (
-            <Card
+            <div
               key={product.id}
-              className="group relative overflow-hidden border-none shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 rounded-3xl"
+              className="group relative overflow-hidden rounded-2xl frosted-glass border border-electric-chrome/30 hover:border-razor-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-razor-cyan/20 hover:-translate-y-2"
             >
-              {/* Gradient background */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${product.gradient} opacity-90`} />
-
-              {/* Product image placeholder with generated image */}
-              <div className="relative h-72 overflow-hidden">
+              {/* Product image */}
+              <div className="relative h-64 overflow-hidden bg-gradient-to-br from-razor-cyan/10 to-cyber-purple/10">
                 <img
-                  src={product.image || "/placeholder.svg"}
+                  src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover float-animation"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 float-animation"
                 />
+                {/* Overlay shimmer */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
 
               {/* Product details */}
-              <div className="relative p-6 bg-white">
-                <h3 className="font-display text-2xl font-bold text-[#0B3D33] mb-2">{product.name}</h3>
-                <p className="text-[#0B3D33]/70 mb-4">{product.description}</p>
+              <div className="relative p-6 space-y-4">
+                <div>
+                  <h3 className="font-display text-2xl font-bold text-midnight-steel dark:text-lather-white mb-2 group-hover:text-razor-cyan transition-colors">
+                    {product.name}
+                  </h3>
+                  <p className="text-sm text-midnight-steel/60 dark:text-lather-white/60">
+                    {product.description}
+                  </p>
+                </div>
 
-                <div className="flex items-center justify-between">
-                  <Button className="bg-[#FF6B35] hover:bg-[#FF6B35]/90 text-white rounded-full px-6">
-                    <ShoppingCart className="h-4 w-4 mr-2" />
-                    Add
-                  </Button>
+                <div className="flex items-center justify-between pt-4">
+                  <span className="text-2xl font-display font-bold text-midnight-steel dark:text-lather-white">
+                    {product.price}
+                  </span>
+                  <button className="p-3 bg-gradient-to-r from-razor-cyan to-cyber-purple text-white rounded-lg hover:shadow-lg hover:shadow-razor-cyan/50 transition-all duration-300 cyber-glow">
+                    <ShoppingCart size={20} />
+                  </button>
                 </div>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>

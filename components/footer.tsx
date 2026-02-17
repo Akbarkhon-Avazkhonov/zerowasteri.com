@@ -1,88 +1,94 @@
-import { Instagram, Facebook, Twitter } from "lucide-react"
+import { Instagram, Facebook, Twitter, Linkedin } from 'lucide-react'
 
 export function Footer() {
   return (
-    <footer className="bg-[#0B3D33] text-white py-16 px-4">
-      <div className="container mx-auto">
+    <footer className="bg-midnight-steel dark:bg-lather-white text-lather-white dark:text-midnight-steel py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="font-display text-3xl font-bold mb-4">Zerowasteri</h3>
-            <p className="text-white/70 leading-relaxed mb-6">
-              Creating a world where luxury and sustainability coexist. One bath bomb at a time.
+            <h3 className="font-display text-3xl font-bold mb-4 text-razor-cyan">ShavingKit.org</h3>
+            <p className="text-lather-white/70 dark:text-midnight-steel/70 leading-relaxed mb-6">
+              Precision. Ritual. Edge. We believe every shave should be a moment of mastery. Surgical-grade tools for the modern gentleman.
             </p>
 
             <div className="flex gap-4">
               <a
                 href="#"
-                className="w-12 h-12 rounded-full bg-white/10 hover:bg-[#A06BFF] flex items-center justify-center transition-colors"
+                className="w-12 h-12 rounded-full bg-electric-chrome/20 hover:bg-razor-cyan hover:text-midnight-steel flex items-center justify-center transition-all duration-300 cyber-glow"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="w-12 h-12 rounded-full bg-white/10 hover:bg-[#A06BFF] flex items-center justify-center transition-colors"
+                className="w-12 h-12 rounded-full bg-electric-chrome/20 hover:bg-razor-cyan hover:text-midnight-steel flex items-center justify-center transition-all duration-300 cyber-glow"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="w-12 h-12 rounded-full bg-white/10 hover:bg-[#A06BFF] flex items-center justify-center transition-colors"
+                className="w-12 h-12 rounded-full bg-electric-chrome/20 hover:bg-razor-cyan hover:text-midnight-steel flex items-center justify-center transition-all duration-300 cyber-glow"
               >
                 <Twitter className="h-5 w-5" />
+              </a>
+              <a
+                href="#"
+                className="w-12 h-12 rounded-full bg-electric-chrome/20 hover:bg-razor-cyan hover:text-midnight-steel flex items-center justify-center transition-all duration-300 cyber-glow"
+              >
+                <Linkedin className="h-5 w-5" />
               </a>
             </div>
           </div>
 
           {/* Shop */}
           <div>
-            <h4 className="font-display text-lg font-bold mb-4">Shop</h4>
-            <ul className="space-y-2 text-white/70">
+            <h4 className="font-display text-lg font-bold mb-4 text-lather-white dark:text-midnight-steel">Shop</h4>
+            <ul className="space-y-2 text-lather-white/70 dark:text-midnight-steel/70">
               <li>
-                <a href="#" className="hover:text-[#A06BFF] transition-colors">
-                  All Products
+                <a href="#" className="hover:text-razor-cyan dark:hover:text-razor-cyan transition-colors">
+                  All Razors
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#A06BFF] transition-colors">
-                  Bath & Body
+                <a href="#" className="hover:text-razor-cyan dark:hover:text-razor-cyan transition-colors">
+                  Brushes
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#A06BFF] transition-colors">
-                  Hair Care
+                <a href="#" className="hover:text-razor-cyan dark:hover:text-razor-cyan transition-colors">
+                  Lathers & Soaps
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#A06BFF] transition-colors">
-                  Gift Sets
+                <a href="#" className="hover:text-razor-cyan dark:hover:text-razor-cyan transition-colors">
+                  Custom Kits
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* About */}
+          {/* Support */}
           <div>
-            <h4 className="font-display text-lg font-bold mb-4">About</h4>
-            <ul className="space-y-2 text-white/70">
+            <h4 className="font-display text-lg font-bold mb-4 text-lather-white dark:text-midnight-steel">Support</h4>
+            <ul className="space-y-2 text-lather-white/70 dark:text-midnight-steel/70">
               <li>
-                <a href="#" className="hover:text-[#A06BFF] transition-colors">
-                  Our Story
+                <a href="#" className="hover:text-razor-cyan dark:hover:text-razor-cyan transition-colors">
+                  The Ritual
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#A06BFF] transition-colors">
-                  Sustainability
+                <a href="#" className="hover:text-razor-cyan dark:hover:text-razor-cyan transition-colors">
+                  Maintenance
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#A06BFF] transition-colors">
-                  Refill Program
+                <a href="#" className="hover:text-razor-cyan dark:hover:text-razor-cyan transition-colors">
+                  Warranty
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#A06BFF] transition-colors">
-                  Contact
+                <a href="#" className="hover:text-razor-cyan dark:hover:text-razor-cyan transition-colors">
+                  Contact Us
                 </a>
               </li>
             </ul>
@@ -90,18 +96,18 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/70 text-sm">© 2025 Zerowasteri. All rights reserved.</p>
+        <div className="border-t border-electric-chrome/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-lather-white/70 dark:text-midnight-steel/70 text-sm">© 2025 ShavingKit.org. All rights reserved.</p>
 
-          <div className="flex gap-6 text-sm text-white/70">
-            <a href="#" className="hover:text-[#A06BFF] transition-colors">
+          <div className="flex gap-6 text-sm text-lather-white/70 dark:text-midnight-steel/70">
+            <a href="#" className="hover:text-razor-cyan transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-[#A06BFF] transition-colors">
+            <a href="#" className="hover:text-razor-cyan transition-colors">
               Terms of Service
             </a>
-            <a href="#" className="hover:text-[#A06BFF] transition-colors">
-              Shipping
+            <a href="#" className="hover:text-razor-cyan transition-colors">
+              Shipping & Returns
             </a>
           </div>
         </div>

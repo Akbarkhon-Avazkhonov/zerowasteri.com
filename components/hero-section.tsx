@@ -1,55 +1,85 @@
-"use client"
+'use client'
 
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight } from 'lucide-react'
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#A06BFF] via-[#FF6B35] to-[#0B3D33]">
-      {/* Animated gradient overlay */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#A06BFF] rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#FF6B35] rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-700" />
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-[#0B3D33] rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000" />
-      </div>
+    <section id="hero" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center overflow-hidden">
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* Left Content */}
+        <div className="space-y-8 z-10">
+          <div className="space-y-4">
+            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-midnight-steel dark:text-lather-white leading-tight">
+              Shaving, <br />
+              <span className="iridescent-gradient bg-clip-text text-transparent">
+                Sharpened.
+              </span>
+            </h1>
+            <p className="text-lg sm:text-xl text-midnight-steel/70 dark:text-lather-white/70 max-w-2xl leading-relaxed">
+              Precision tools for the ultimate skin ritual. From surgical-grade steel to nutrient-rich lathers—discover the kit that defines your edge.
+            </p>
+          </div>
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-6 tracking-tight text-balance">
-            Wash Away the Waste.
-          </h1>
+          <div className="flex flex-col sm:flex-row gap-4 pt-8">
+            <button className="px-8 py-4 bg-gradient-to-r from-razor-cyan to-cyber-purple text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-razor-cyan/50 transition-all duration-300 flex items-center justify-center gap-2 cyber-glow">
+              Explore Collection
+              <ArrowRight size={20} />
+            </button>
+            <button className="px-8 py-4 border-2 border-electric-chrome text-midnight-steel dark:text-lather-white font-semibold rounded-lg hover:bg-electric-chrome/10 transition-all duration-300">
+              Learn More
+            </button>
+          </div>
 
-          <p className="text-2xl md:text-4xl font-display text-white/90 mb-4">Luxury Without the Landfill.</p>
-
-          <p className="text-lg md:text-xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Indulgent, plastic-free bath rituals designed for you and the planet. Zero waste. Infinite glow.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              size="lg"
-              className="bg-[#FF6B35] hover:bg-[#FF6B35]/90 text-white px-8 py-6 text-lg font-display rounded-3xl shadow-2xl hover:shadow-[#FF6B35]/50 transition-all hover:scale-105"
-            >
-              Shop the Collection
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 px-8 py-6 text-lg font-display rounded-3xl"
-            >
-              Learn Our Story
-            </Button>
+          {/* Trust badges */}
+          <div className="flex flex-col sm:flex-row gap-6 pt-8 text-sm text-midnight-steel/60 dark:text-lather-white/60">
+            <div className="flex items-center gap-2">
+              <span className="w-8 h-8 rounded-full bg-razor-cyan/20 flex items-center justify-center text-razor-cyan font-bold">✓</span>
+              Surgical-Grade Steel
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-8 h-8 rounded-full bg-razor-cyan/20 flex items-center justify-center text-razor-cyan font-bold">✓</span>
+              Lifetime Warranty
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-8 h-8 rounded-full bg-razor-cyan/20 flex items-center justify-center text-razor-cyan font-bold">✓</span>
+              Eco-Friendly
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-2">
-          <div className="w-1 h-3 bg-white/70 rounded-full" />
+        {/* Right Visual */}
+        <div className="relative h-96 lg:h-full min-h-96 lg:min-h-screen flex items-center justify-center">
+          {/* Animated background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-razor-cyan/10 to-cyber-purple/10 rounded-3xl blur-3xl"></div>
+          
+          {/* Chrome element */}
+          <div className="absolute w-64 h-64 sm:w-80 sm:h-80 rounded-full iridescent-gradient opacity-20 blur-3xl animate-pulse"></div>
+
+          {/* Main visual - Razor blade effect */}
+          <div className="relative w-72 h-72 sm:w-96 sm:h-96 flex items-center justify-center float-animation">
+            <div className="absolute w-full h-full rounded-3xl frosted-glass border border-electric-chrome/50 shadow-2xl shadow-razor-cyan/20 flex items-center justify-center overflow-hidden">
+              {/* Water droplet effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-razor-cyan/10 via-transparent to-cyber-purple/10 rounded-3xl"></div>
+              
+              {/* Razor blade shimmer */}
+              <div className="absolute inset-0 razorblade-shimmer rounded-3xl"></div>
+
+              {/* Content */}
+              <div className="relative z-10 text-center space-y-4">
+                <div className="text-6xl sm:text-7xl font-bold">⚔</div>
+                <p className="font-display text-2xl sm:text-3xl font-bold text-midnight-steel dark:text-lather-white">
+                  The Perfect Glide
+                </p>
+                <p className="text-sm text-midnight-steel/60 dark:text-lather-white/60">
+                  Precision Redefined
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Floating decorative elements */}
+          <div className="absolute top-12 right-12 w-20 h-20 rounded-full border-2 border-razor-cyan/30 animate-spin" style={{ animationDuration: '20s' }}></div>
+          <div className="absolute bottom-20 left-12 w-16 h-16 rounded-full border-2 border-cyber-purple/30 animate-spin" style={{ animationDuration: '25s', animationDirection: 'reverse' }}></div>
         </div>
       </div>
     </section>
