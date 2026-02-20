@@ -88,14 +88,7 @@ export function ProductGrid() {
                   </p>
                 </div>
 
-                <div className="flex items-center justify-between pt-4">
-                  <span className="text-2xl font-display font-bold text-midnight-steel dark:text-lather-white">
-                    {product.price}
-                  </span>
-                  <button className="p-3 bg-gradient-to-r from-razor-cyan to-cyber-purple text-white rounded-lg hover:shadow-lg hover:shadow-razor-cyan/50 transition-all duration-300 cyber-glow">
-                    <ShoppingCart size={20} />
-                  </button>
-                </div>
+                
               </div>
             </div>
           ))}
