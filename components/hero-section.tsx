@@ -63,8 +63,12 @@ export function HeroSection() {
               {/* Water droplet effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-razor-cyan/10 via-transparent to-cyber-purple/10 rounded-3xl"></div>
               
-              {/* Razor blade shimmer */}
-              <div className="absolute inset-0 razorblade-shimmer rounded-3xl"></div>
+              {/* Razor blade image */}
+              <img
+                src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=500&h=500&fit=crop"
+                alt="Razor blade"
+                className="absolute inset-0 w-full h-full object-cover rounded-3xl opacity-80"
+              />
 
               {/* Content */}
               <div className="relative z-10 text-center space-y-4">
