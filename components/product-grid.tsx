@@ -73,8 +73,12 @@ export function ProductGrid() {
                   alt={product.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 float-animation"
                 />
-                {/* Overlay shimmer */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {/* Overlay with product icon/badge */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-razor-cyan to-cyber-purple flex items-center justify-center text-white shadow-lg shadow-razor-cyan/50 cyber-glow">
+                    <ShoppingCart size={24} />
+                  </div>
+                </div>
               </div>
 
               {/* Product details */}
