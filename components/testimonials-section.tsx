@@ -7,21 +7,21 @@ const testimonials = [
     name: 'James Mitchell',
     role: 'Barber & Grooming Expert',
     content: 'ShavingKit.org transformed my morning ritual. The precision and quality are unmatched. This is what luxury grooming should be.',
-    avatar: '👨‍💼',
+    avatar: '/images/avatar-james.jpg',
     rating: 5,
   },
   {
     name: 'Marcus Chen',
     role: 'CEO & Entrepreneur',
     content: 'I\'ve tried everything. These razors are surgical instruments. Worth every penny. The customer service is equally sharp.',
-    avatar: '💼',
+    avatar: '/images/avatar-marcus.jpg',
     rating: 5,
   },
   {
     name: 'David Turner',
     role: 'Lifestyle Influencer',
     content: 'From the packaging to the shave itself, every detail screams precision. ShavingKit.org isn\'t a product—it\'s an experience.',
-    avatar: '🎬',
+    avatar: '/images/avatar-david.jpg',
     rating: 5,
   },
 ]
@@ -64,7 +64,7 @@ export function TestimonialsSection() {
                 {/* Author */}
                 <div className="pt-6 border-t border-electric-chrome/20">
                   <div className="flex items-center gap-4">
-                    <div className="text-4xl">{testimonial.avatar}</div>
+                    <img src={testimonial.avatar} alt={testimonial.name} className="w-12 h-12 rounded-full object-cover border-2 border-razor-cyan/50" />
                     <div>
                       <p className="font-display font-bold text-midnight-steel dark:text-lather-white">
                         {testimonial.name}
