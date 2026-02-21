@@ -12,32 +12,7 @@ export function Footer() {
               Precision. Ritual. Edge. We believe every shave should be a moment of mastery. Surgical-grade tools for the modern gentleman.
             </p>
 
-            <div className="flex gap-4">
-              <a
-                href="#"
-                className="w-12 h-12 rounded-full bg-electric-chrome/20 hover:bg-razor-cyan hover:text-midnight-steel flex items-center justify-center transition-all duration-300 cyber-glow"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="w-12 h-12 rounded-full bg-electric-chrome/20 hover:bg-razor-cyan hover:text-midnight-steel flex items-center justify-center transition-all duration-300 cyber-glow"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="w-12 h-12 rounded-full bg-electric-chrome/20 hover:bg-razor-cyan hover:text-midnight-steel flex items-center justify-center transition-all duration-300 cyber-glow"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="w-12 h-12 rounded-full bg-electric-chrome/20 hover:bg-razor-cyan hover:text-midnight-steel flex items-center justify-center transition-all duration-300 cyber-glow"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </div>
+            
           </div>
 
           {/* Shop */}
