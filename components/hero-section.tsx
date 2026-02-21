@@ -65,8 +65,8 @@ export function HeroSection() {
               
               {/* Razor blade image */}
               <img
-                src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=500&h=500&fit=crop"
-                alt="Razor blade"
+                src="/images/hero-razor.jpg"
+                alt="Premium straight razor on dark leather"
                 className="absolute inset-0 w-full h-full object-cover rounded-3xl opacity-80"
               />
 
